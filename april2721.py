@@ -128,3 +128,18 @@ for i in opt:
 print(sum)
 
 #36
+
+# array is sorted or not
+def isSorted(opt):
+    aj = opt[0]
+    for i in opt:
+        if i>=aj:
+            aj = i
+        else:
+            print("Not sorted")
+            break
+
+opt = [1,2,3,4,9,6,7,8]
+isSorted(opt)
+
+# Not sorted
