@@ -82,3 +82,14 @@ print("No. of consonant is ="+ str(cons))
 # d is consonant
 # No. of vowel is =5
 # No. of consonant is =6
+
+
+#find minm number
+opt = [100,201,37,45,190,158,67]
+vow = opt[0]
+for i in opt:
+    if i<vow:
+        vow = i
+print(vow)
+
+# 37
