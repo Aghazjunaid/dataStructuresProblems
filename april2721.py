@@ -52,3 +52,33 @@ for i in aj:
         print("true")
 
 #true
+
+
+# count and print vowels and consonant
+opt = ['a','e','i','o','u']
+data= "aghazjunaid"
+vow =0
+cons=0
+for i in data:
+    if i in opt:
+        print(i+" is vowel")
+        vow= vow + 1
+    else:
+        print(i+" is consonant")
+        cons = cons + 1
+print("No. of vowel is ="+ str(vow))
+print("No. of consonant is ="+ str(cons))
+
+# a is vowel
+# g is consonant
+# h is consonant
+# a is vowel
+# z is consonant
+# j is consonant
+# u is vowel
+# n is consonant
+# a is vowel
+# i is vowel
+# d is consonant
+# No. of vowel is =5
+# No. of consonant is =6
