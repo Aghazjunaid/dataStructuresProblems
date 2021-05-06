@@ -93,3 +93,28 @@ for i in opt:
 print(vow)
 
 # 37
+
+# fibonacci series
+def fib(n):
+    i=0
+    j=1
+    print(i)
+    print(j)
+    for k in range(0,n-2):
+        x = i+j
+        print(x)
+        i=j
+        j=x
+
+fib(100)
+
+# 0
+# 1
+# 1
+# 2
+# 3
+# 5
+# 8
+# 13
+# 21
+# 34
