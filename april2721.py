@@ -42,3 +42,13 @@ opt=fact(4)
 print(opt)
 
 # 24
+
+
+# searching algo
+aj = [10,12,15,16,18]
+key = 18
+for i in aj:
+    if key==i:
+        print("true")
+
+#true
