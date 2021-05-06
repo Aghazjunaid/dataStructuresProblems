@@ -30,3 +30,15 @@ fun(3)
 # 1
 # 2
 # 3
+
+# factorial using recursion
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return fact(n-1)*n
+
+opt=fact(4)
+print(opt)
+
+# 24
