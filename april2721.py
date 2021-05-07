@@ -264,3 +264,17 @@ for i in range(1,len(table)):
 # 5 is appeared 3 times.
 # 6 is appeared 2 times.
 # 7 is appeared 2 times.
+
+
+# find maxm and minm in a single turn
+opt = [21,23,6,13,34,112,14,10,24,45,5,12,5,46,79,7]
+max = opt[0]
+min = opt[0]
+for i in range(1,len(opt)):
+    if opt[i]>max:
+        max=opt[i]
+    elif opt[i]<min:
+        min=opt[i]
+print(max,min)
+
+# 112 5
