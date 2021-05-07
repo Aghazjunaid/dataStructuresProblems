@@ -202,3 +202,24 @@ for i in opt:
 # 7
 # 10
 # 11
+
+#      OR  using HashTable
+opt = [1,4,7,5,2,6,8,12,11]
+hashTable = []
+max = opt[0] #12
+for i in opt:
+    if i > max:
+        max = i
+for j in range(0,max+1):
+    hashTable.append(0)
+print(hashTable) # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+for i in opt:
+    hashTable[i] += 1
+print(hashTable) # [0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1]
+for i in range(1,len(hashTable)):
+    if hashTable[i]==0:
+        print(i)
+
+# 3
+# 9
+# 10
