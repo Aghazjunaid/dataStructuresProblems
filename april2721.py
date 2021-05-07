@@ -239,3 +239,28 @@ for i in opt:
 print(duplicates)
 
 # [3, 4, 5, 7]
+
+
+# count duplicates in an unsorted array
+opt = [2,3,6,3,4,2,4,1,4,5,5,12,5,6,7,7]
+table = []
+max = opt[0] #2
+for i in opt:
+    if i > max:
+        max = i
+for i in range(0,max+1):
+    table.append(0)
+print(table) # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+for i in opt:
+    table[i] += 1
+print(table) # [0, 1, 2, 2, 3, 3, 2, 2, 0, 0, 0, 0, 1]
+for i in range(1,len(table)):
+    if table[i]>1:
+        print(str(i)+" is appeared "+str(table[i])+" times.")
+
+# 2 is appeared 2 times.
+# 3 is appeared 2 times.
+# 4 is appeared 3 times.
+# 5 is appeared 3 times.
+# 6 is appeared 2 times.
+# 7 is appeared 2 times.
