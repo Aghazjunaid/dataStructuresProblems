@@ -150,3 +150,24 @@ opt.reverse()
 print(opt)
 
 # [8, 7, 6, 5, 4, 3, 2, 1]
+
+
+# find single missing element
+opt = [1,2,3,4,5,6,8,9,10,11,12]
+dif = opt[0] -0
+for i in opt:
+    newDif = opt[i] - i
+    if dif != newDif:
+        print(i+dif)
+        break
+
+# 7
+#                             OR
+
+sum = 0
+for j in opt:
+    sum =sum + j
+calc = ((len(opt)+1)*(len(opt)+2))/2
+print("Missing no. is = "+ str(calc-sum))
+
+# Missing no. is = 7.0
