@@ -312,3 +312,21 @@ x=input("raw_input")
 dict(int(x))
 
 # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+
+
+# 9. Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
+opt = [0,1,2,0,2,1]
+low = 0
+mid = 0
+high = len(opt)-1
+while mid <= high:
+    if opt[mid] == 0:
+        opt[low], opt[mid] = opt[mid], opt[low]
+        low +=1
+        mid +=1
+    elif opt[mid] == 1:
+        mid +=1
+    else:
+        opt[mid], opt[high] = opt[high], opt[mid]
+        high -= 1
+# print(opt)
