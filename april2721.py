@@ -171,3 +171,19 @@ calc = ((len(opt)+1)*(len(opt)+2))/2
 print("Missing no. is = "+ str(calc-sum))
 
 # Missing no. is = 7.0
+
+
+# table maker
+for i in range(1,11):
+    print(str(11) + "*" + str(i) + "=" + str(11*i))
+
+# 11*1=11
+# 11*2=22
+# 11*3=33
+# 11*4=44
+# 11*5=55
+# 11*6=66
+# 11*7=77
+# 11*8=88
+# 11*9=99
+# 11*10=110
