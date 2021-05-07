@@ -187,3 +187,18 @@ for i in range(1,11):
 # 11*8=88
 # 11*9=99
 # 11*10=110
+
+
+# finding multiple missing elements
+opt = [1,2,3,4,5,6,8,11,12]
+dif = opt[0] -0
+for i in opt:
+    newDif = opt[i] - i
+    if dif != newDif:
+        while dif < newDif:
+            print(i+dif)
+            dif = dif + 1
+
+# 7
+# 10
+# 11
