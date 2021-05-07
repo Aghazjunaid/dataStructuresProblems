@@ -298,3 +298,17 @@ print(num)
 # 2779, 2786, 2793, 2807, 2814, 2821, 2828, 2842, 2849, 2856, 2863, 2877, 2884, 2891, 2898, 2912, 2919, 2926, 2933, 
 # 2947, 2954, 2961, 2968, 2982, 2989, 2996, 3003, 3017, 3024, 3031, 3038, 3052, 3059, 3066, 3073, 3087, 3094, 3101, 
 # 3108, 3122, 3129, 3136, 3143, 3157, 3164, 3171, 3178, 3192, 3199]
+
+
+# With a given integral number n, write a program to generate a dictionary that contains (i, i*i) 
+# such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
+def dict(n):
+    dic = {}
+    for i in range(1,n+1):
+        dic[i] = i*i
+    print(dic)
+
+x=input("raw_input")
+dict(int(x))
+
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
