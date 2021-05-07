@@ -223,3 +223,19 @@ for i in range(1,len(hashTable)):
 # 3
 # 9
 # 10
+
+
+# finding duplicates in a sorted array
+opt = [1,2,3,3,4,4,4,5,5,5,5,6,7,7]
+duplicates = []
+first = 0
+for i in opt:
+    if first == i:
+        if i not in duplicates:
+            duplicates.append(i)
+        first = i
+    else:
+        first = i
+print(duplicates)
+
+# [3, 4, 5, 7]
