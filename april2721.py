@@ -345,3 +345,14 @@ def prime(opt):
 
 prime(13) # prime
 prime(130) # Not prime
+
+
+# count factors of a number
+def factor(opt):
+    count = 0
+    for i in range(1,opt+1):
+        if opt%i==0:
+            count += 1
+    print("No. of factor of "+str(opt)+ " is "+str(count))
+
+factor(24) # No. of factor of 24 is 8
