@@ -356,3 +356,14 @@ def factor(opt):
     print("No. of factor of "+str(opt)+ " is "+str(count))
 
 factor(24) # No. of factor of 24 is 8
+
+
+# print factors
+def factor(opt):
+    fac = []
+    for i in range(1,opt+1):
+        if opt%i==0:
+            fac.append(i)
+    print("Factors are = "+ str(fac))
+
+factor(24) # Factors are = [1, 2, 3, 4, 6, 8, 12, 24]
