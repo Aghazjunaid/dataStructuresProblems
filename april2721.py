@@ -330,3 +330,18 @@ while mid <= high:
         opt[mid], opt[high] = opt[high], opt[mid]
         high -= 1
 # print(opt)
+
+
+# No. is prime or not
+def prime(opt):
+    count = 0
+    for i in range(2,opt):
+        if opt%i==0:
+            count += 1
+    if count >= 1:
+        print("Not prime")
+    else:
+        print("prime")
+
+prime(13) # prime
+prime(130) # Not prime
