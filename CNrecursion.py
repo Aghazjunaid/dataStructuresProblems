@@ -135,3 +135,22 @@
 # # (())()
 # # ()(())
 # # ()()()
+
+
+# # Permutation of a string
+# def per(ques,ans):
+#     if len(ques)==0:
+#         print(ans)
+#         return
+    
+#     for i in range(len(ques)):
+#         per(ques[i+1:]+ques[0:i], ans+ques[i])
+
+# per("abc","")
+
+# # abc
+# # acb
+# # bca
+# # bac
+# # cab
+# # cba
