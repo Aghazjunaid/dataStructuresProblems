@@ -276,3 +276,31 @@
 # res = prod - sum
 # print(res) 
 # # 21
+
+
+# # Multiply Numbers Recursively
+# abc=1234
+# ques = str(abc)
+# ans = 1
+# def subst(ques,ans):
+#     if len(ques)==0:
+#         print(ans)
+#         return
+
+#     subst(ques[1:],ans*int(ques[0]))
+
+# subst(ques,ans)
+# # 24
+
+# # Add Numbers Recursively
+# def addd(ques,ans):
+#     if len(ques)==0:
+#         print(ans)
+#         return
+    
+#     addd(ques[1:],ans+int(ques[0]))
+
+# addd('1234',0)
+# # 10
+
+    
