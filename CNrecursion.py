@@ -249,3 +249,30 @@
 # # DHV
 # # DVH
 # # DD
+
+
+# # Power of n:
+# def powr(n):
+#     if n == 1:
+#         print(True)
+#         return
+#     if n < 1:
+#         print(False)
+#         return 
+#     powr(n/2)
+
+# powr(1)
+
+# # True
+
+# # #  Subtract the Product and Sum of Digits of an Integer
+# abc=4421
+# sum = 0
+# prod = 1
+# for i in range(len(str(abc))):
+#     x = str(abc)[i]
+#     sum +=int(x)
+#     prod *=int(x)
+# res = prod - sum
+# print(res) 
+# # 21
