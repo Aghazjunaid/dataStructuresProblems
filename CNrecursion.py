@@ -175,3 +175,30 @@
 # # THT
 # # TTH
 # # TTT
+
+# # Climbing Stairs
+# def climb(curr,n,ans):
+#     if curr == n:
+#         print(ans)
+#         return
+#     if curr > n:
+#         return
+
+#     climb(curr+1, n, ans+"1")
+#     climb(curr+2, n, ans+"2")
+#     climb(curr+3, n, ans+"3")
+
+# climb(0,5,"")
+
+# # 11111
+# # 1112
+# # 113
+# # 1211
+# # 122
+# # 131
+# # 2111
+# # 212
+# # 221
+# # 23
+# # 311
+# # 32
