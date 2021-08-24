@@ -30,8 +30,8 @@ def printTreeDetailed(root):
     printTreeDetailed(root.left)
     printTreeDetailed(root.right)
 
-root = treeInput()
-printTreeDetailed(root)
+# root = treeInput()
+# printTreeDetailed(root)
 # For this input
 # 1
 # 2
@@ -53,3 +53,16 @@ printTreeDetailed(root)
 # 6:
 # 3:R 5
 # 5:
+
+
+# def nodes(root):
+#     if root == None:
+#         return 0
+    
+#     return nodes(root.left)+nodes(root.right)+1
+
+# root = treeInput()
+# printTreeDetailed(root)
+# print(nodes(root))
+    
+# # 6
