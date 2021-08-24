@@ -154,3 +154,24 @@
 # # bac
 # # cab
 # # cba
+
+
+# # Tossing coin
+# def coin(n,ans):
+#     if n == 0:
+#         print(ans)
+#         return
+    
+#     coin(n-1,ans+"H")
+#     coin(n-1, ans+"T")
+
+# coin(3,"")
+
+# # HHH
+# # HHT
+# # HTH
+# # HTT
+# # THH
+# # THT
+# # TTH
+# # TTT
