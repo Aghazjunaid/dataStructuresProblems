@@ -202,3 +202,50 @@
 # # 23
 # # 311
 # # 32
+
+
+# # Maze Path(Without Diagonal)
+# def path(cr,cc,er,ec,ans):
+#     if (cr==er and cc==ec):
+#         print(ans)
+#         return
+#     if cr>er or cc>ec:
+#         return
+#     path(cr,cc+1,er,ec,ans+"H")
+#     path(cr+1, cc, er, ec, ans+"V")
+
+# path(0,0,2,2,"")
+
+# # HHVV
+# # HVHV
+# # HVVH
+# # VHHV
+# # VHVH
+# # VVHH
+
+# # Maze Path(With Diagonal)
+# def path(cr,cc,er,ec,ans):
+#     if (cr==er and cc==ec):
+#         print(ans)
+#         return
+#     if cr>er or cc>ec:
+#         return
+#     path(cr,cc+1,er,ec,ans+"H")
+#     path(cr+1, cc, er, ec, ans+"V")
+#     path(cr+1, cc+1, er, ec, ans+"D")
+
+# path(0,0,2,2,"")
+
+# # HHVV
+# # HVHV
+# # HVVH
+# # HVD
+# # HDV
+# # VHHV
+# # VHVH
+# # VHD
+# # VVHH
+# # VDH
+# # DHV
+# # DVH
+# # DD
