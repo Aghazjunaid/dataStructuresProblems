@@ -218,3 +218,86 @@ def printTreeDetailed(root):
 # # 3:
 # # 6
 
+# # Nodes greater than X
+# def great(root,x):
+#     if root == None:
+#         return 0
+#     count = 0
+#     if root.data > x:
+#         print("No greater than", x, "is", root.data)
+#         count +=1
+        
+#     lef = great(root.left, x)
+#     rig = great(root.right, x)
+#     return count + lef + rig
+
+# root = treeInput()
+# printTreeDetailed(root)
+# print(great(root,2))
+
+# # 1:L 2,R 3
+# # 2:L 4,R 6
+# # 4:
+# # 6:
+# # 3:R 5
+# # 5:
+# # No greater than 2 is 4
+# # No greater than 2 is 6
+# # No greater than 2 is 3
+# # No greater than 2 is 5
+# # 4
+
+
+# #Replace Node With Depth
+# def dep(root,n):
+#     if root == None:
+#         return -1
+#     root.data = n
+#     dep(root.left, n+1)
+#     dep(root.right, n+1)
+
+#     return root
+
+
+# root = treeInput()
+# printTreeDetailed(root)
+# root = dep(root,0)
+# printTreeDetailed(root)
+
+# # 1:L 2,R 3 
+# # 2:L 4,R 6
+# # 4:
+# # 6:
+# # 3:R 5
+# # 5:
+# # 0:L 1,R 1
+# # 1:L 2,R 2
+# # 2:
+# # 2:
+# # 1:R 2
+# # 2:
+
+
+# #Is node present?
+# def pres(root,n):
+#     if root == None:
+#         return
+#     if root.data == n:
+#         print(True)
+#         return
+
+#     pres(root.left, n)
+#     pres(root.right, n)
+
+# root = treeInput()
+# printTreeDetailed(root)
+# pres(root,5)
+
+# # 1:L 2,R 3
+# # 2:L 4,R 6
+# # 4:
+# # 6:
+# # 3:R 5
+# # 5:
+# # True
+
