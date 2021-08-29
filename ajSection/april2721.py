@@ -338,6 +338,7 @@ def prime(opt):
     for i in range(2,opt):
         if opt%i==0:
             count += 1
+            break
     if count >= 1:
         print("Not prime")
     else:
