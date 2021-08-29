@@ -46,3 +46,16 @@
 # [1, 2, 3, 4, 5, 7, 9]
 # [11, 13, 21, 33]
 
+# # Kadane’s Algorithm OR Maximum Subarray Sum
+# arr = [-2,-3,4,-1,-2,1,5,-3]
+# sum = 0
+# maxm = arr[0]
+# for i in arr:
+#     sum += i
+#     if sum < 0:
+#         sum = 0
+#     if sum > maxm:
+#         maxm = sum
+
+# print(maxm) # 7
+    
