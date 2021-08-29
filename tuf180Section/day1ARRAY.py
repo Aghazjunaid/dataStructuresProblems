@@ -30,3 +30,19 @@
 
 # # 7
 
+# # Merge two sorted Arrays without extra space
+# arr1 = [1,3,4,7,9,11,33]
+# arr2 = [2,5,13,21]
+# i= 0
+
+# while arr1[len(arr1)-1] > arr2[0]:
+#     if arr1[i]>arr2[0]:
+#         arr1[i],arr2[0] = arr2[0], arr1[i]
+#         arr2 = sorted(arr2)
+#     i += 1
+
+# print(arr1)
+# print(arr2)
+# [1, 2, 3, 4, 5, 7, 9]
+# [11, 13, 21, 33]
+
