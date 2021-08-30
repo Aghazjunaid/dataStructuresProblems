@@ -61,7 +61,7 @@
 # print(maxm) # 7
 
 
-# # Merge Overlapping Subintervals
+# # Merge Overlapping Subintervals (inc)
 # arr = [[6, 8], [1, 9], [2, 4], [4, 7]]
 # mergeArr = []
 # arr.sort() # [[1, 9], [2, 4], [4, 7], [6, 8]]
