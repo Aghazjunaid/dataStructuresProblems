@@ -46,6 +46,7 @@
 # [1, 2, 3, 4, 5, 7, 9]
 # [11, 13, 21, 33]
 
+
 # # Kadane’s Algorithm OR Maximum Subarray Sum
 # arr = [-2,-3,4,-1,-2,1,5,-3]
 # sum = 0
@@ -58,4 +59,26 @@
 #         maxm = sum
 
 # print(maxm) # 7
+
+
+# # Merge Overlapping Subintervals
+# arr = [[6, 8], [1, 9], [2, 4], [4, 7]]
+# mergeArr = []
+# arr.sort() # [[1, 9], [2, 4], [4, 7], [6, 8]]
+# maxm = -99999
+# minm = -99999
+# for i in range(len(arr)):
+#    print(arr[i])
+
+
+# Find the duplicate in an array of N+1 integers.
+# arr = [3,8,1,7,9,2,4,5,8]
+
+# arr.sort()
+# for i in range(0,len(arr)-1):
+#     if arr[i] == arr[i+1]:
+#         print(arr[i])
+# 8
+
+
     
