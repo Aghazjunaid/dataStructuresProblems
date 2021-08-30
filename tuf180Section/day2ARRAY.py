@@ -61,7 +61,7 @@
 # # ROTATE IMAGE By 90
 # arr = [[1,2,3],[4,5,6],[7,8,9]]
 
-# n = len(arr)
+# n = len(arr) row
 # m = len(arr[0])
 
 # for j in range(m):
