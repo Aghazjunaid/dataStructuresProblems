@@ -56,3 +56,19 @@
 #     profit = max(profit, arr[i]-minm)
 
 # print(profit) # 5
+
+
+# # ROTATE IMAGE By 90
+# arr = [[1,2,3],[4,5,6],[7,8,9]]
+
+# n = len(arr)
+# m = len(arr[0])
+
+# for j in range(m):
+#     for i in range(j):
+#         arr[i][j], arr[j][i] =  arr[j][i], arr[i][j] # transverse array [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+
+# for ele in arr:
+#     ele.reverse()
+
+# print(arr) # [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
