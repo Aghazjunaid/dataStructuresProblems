@@ -138,8 +138,37 @@ def lengthLL(head):
 # # 1->2->None
 
 
+# def findKey(head,key):
+#     for i in range(lengthLL(head)):
+#         if head.data == key:
+#             return i
+#         head = head.next
+#     return "Not Found"
+
+# # 1 2 3 4 -1
+# # 1->2->3->4->None
+# # Key is found at index  2
+
+
+# # Sum of LL
+# def sumLL(head):
+#     sum = 0
+#     while head is not None:
+#         sum += head.data
+#         head = head.next
+    
+#     return sum
+
+# # 1 2 3 4 -1
+# # 1->2->3->4->None
+# # 10
+
+
 head = takeInput()
 printll(head)
+# print(sumLL(head))
+# key = findKey(head, 3)
+# print("Key is found at index ",key)
 # newHead = deleteIthNode(head, 2)
 # printll(newHead)
 # print(head) # <__main__.node object at 0x01387220>
