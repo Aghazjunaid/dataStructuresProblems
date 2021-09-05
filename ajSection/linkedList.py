@@ -105,10 +105,44 @@ def lengthLL(head):
 # # 3
 
 
+# # delete ith node
+# def deleteIthNode(head,i):
+#     if i < 0 or i > lengthLL(head):
+#         return head
+#     count = 0
+#     prev = None
+#     curr = head
+#     nxt = head.next
+#     while count < i:
+#         count += 1
+#         prev = curr
+#         curr = nxt
+#         nxt = nxt.next
+#     if prev is not None:
+#         prev.next = nxt
+#     else :
+#         head = nxt
+#     del curr
+#     return head
+
+# # 1 2 3 -1
+# # 1->2->3->None
+# # 2->3->None
+
+# # 1 2 3 4 5 -1
+# # 1->2->3->4->5->None
+# # 1->2->3->5->None
+
+# # 1 2 3 -1
+# # 1->2->3->None
+# # 1->2->None
+
 
 head = takeInput()
-# print(head) # <__main__.node object at 0x01387220>
 printll(head)
+# newHead = deleteIthNode(head, 2)
+# printll(newHead)
+# print(head) # <__main__.node object at 0x01387220>
 # print(printAt(head, 2))
 # print(lengthLL(head))
 # insert(head, 1, 4)
