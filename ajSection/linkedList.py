@@ -163,9 +163,38 @@ def lengthLL(head):
 # # 1->2->3->4->None
 # # 10
 
+# Maxm ele in LL
+def maxm(head):
+    maxi = 0
+    while head is not None:
+        maxi = max(maxi, head.data)
+        head = head.next
+    
+    return maxi
 
+# 1 2 6 3 9 4 5 -1
+# 1->2->6->3->9->4->5->None
+# 9
+
+
+# LL Sorted or not 
+def sorll(head):
+    maxi = head.data
+    while head is not None:
+        if head.data < maxi:
+           return "Not Sorted"
+        maxi = head.data
+        head = head.next
+    
+    return "sorted"
+
+# 1 3 2 4 -1
+# 1->3->2->4->None
+# Not Sorted
 head = takeInput()
 printll(head)
+print(sorll(head))
+# print(maxm(head))
 # print(sumLL(head))
 # key = findKey(head, 3)
 # print("Key is found at index ",key)
