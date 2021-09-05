@@ -31,5 +31,20 @@ def printll(listData):
 
 # 1 2 3 4 5 -1
 # 1->2->3->4->5->None
+
+
+# Length of LL
+def lengthLL(head):
+    count = 0
+    while head is not None:
+        count += 1
+        head = head.next
+    return count
+
+# 1 3 5 2 77 4 -1
+# 1->3->5->2->77->4->None
+# 6
+
 head = takeInput()
 printll(head)
+print(lengthLL(head))
