@@ -112,6 +112,7 @@
 // //     { label: 'Cill', value: 'iopop' }
 // //   ]
 
+
 // //  7. make an object immutable
 // let obj = {
 //     "aj": 1
@@ -121,3 +122,37 @@
 // console.log(obj) // { aj: 1 }
 // delete obj.aj //will not delete
 // obj.op = 2 // will not add new property
+
+
+// // 8. remove an element from an array
+// let value = 3
+// let arr = [1, 2, 3, 4, 5, 3]
+// arr = arr.filter(item => item !== value)
+// console.log(arr) // [ 1, 2, 4, 5 ]
+
+// arr = [1,2,3,4]
+// delete arr[3]
+// console.log(arr) //[ 1, 2, 3, <1 empty item> ]
+
+
+// 
+// function curry(f) { // curry(f) does the currying transform
+//     return function(a) {
+//       return function(b) {
+//         return f(a, b);
+//       };
+//     };
+//   }
+  
+//   // usage
+//   function sum(a, b) {
+//     return a + b;
+//   }
+  
+//   let curriedSum = curry(sum);
+//   console.log(curriedSum(1)(2))  //3
+
+  
+//   const curryUnaryFunction = a => b => c => a + b + c;
+//   console.log(curryUnaryFunction (1) (2) (3)); // returns the number 6
+
