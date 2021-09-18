@@ -191,6 +191,8 @@ def sorll(head):
 # 1 3 2 4 -1
 # 1->3->2->4->None
 # Not Sorted
+
+
 head = takeInput()
 printll(head)
 print(sorll(head))
