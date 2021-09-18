@@ -156,3 +156,50 @@
 //   const curryUnaryFunction = a => b => c => a + b + c;
 //   console.log(curryUnaryFunction (1) (2) (3)); // returns the number 6
 
+
+// let myCar = [ 2, 'cherry condition', 'purchased 1997']
+// let newCar = myCar.slice(0, 2)
+// console.log(newCar) //[ 2, 'cherry condition' ]
+
+
+let arr = [1,10,15,23,12,19]
+// console.log   (arr.every(value => value< 30)) //true
+// console.log(arr.filter(value => value> 10)) //[ 15, 23, 12, 19 ]
+// console.log(arr.find(value => value> 10)) //15
+
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// const result = words.filter(word => word.length > 6);
+// console.log(result);
+// // expected output: Array ["exuberant", "destruction", "present"]
+
+
+// const inventory = [
+//     {name: 'apples', quantity: 2},
+//     {name: 'bananas', quantity: 0},
+//     {name: 'cherries', quantity: 5}
+//   ];
+  
+//   function isCherries(fruit) {
+//     return fruit.name === 'cherries';
+//   }
+  
+//   console.log(inventory.find(isCherries));
+  // { name: 'cherries', quantity: 5 }
+
+
+//   let kvArray = [{key: 1, value: 10},
+//     {key: 2, value: 20},
+//     {key: 3, value: 30}]
+
+// let reformattedArray = kvArray.map(obj => {
+// let rObj = {}
+// rObj[obj.key] = obj.value
+// return rObj
+// })
+// // reformattedArray is now [{1: 10}, {2: 20}, {3: 30}],
+
+// // kvArray is still:
+// // [{key: 1, value: 10},
+// //  {key: 2, value: 20},
+// //  {key: 3, value: 30}]
