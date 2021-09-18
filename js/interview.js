@@ -1,4 +1,4 @@
-// // Count frequency of characters in a string
+// // 1. Count frequency of characters in a string
 // function freq(str){
 //     obj = {}
 //     for(let i = 0; i< str.length; i++){
@@ -30,7 +30,7 @@
 // // d appears 1 times
 // itr(ans)
 
-// // deep/shalow/isolated copy of an object
+// // 2. deep/shalow/isolated copy of an object
 // var empDetails = {
 //     name: "John", age: 25, expertise: "Software Developer"
 //   }
@@ -62,3 +62,62 @@
 // obj.name = "aj"
 // console.log(obj) //{ name: 'aj', age: 25, expertise: 'Software Developer' }
 // console.log(empDetails) //{ name: 'John', age: 25, expertise: 'Software Developer' }
+
+
+// //3. Count no. of substring in a string
+// var temp = "This is a string.";
+// var count = (temp.match(/is/g) || []).length;
+// console.log(count); // 2
+
+
+// // 4. convert object into an array
+// var obj = {"1":5,"2":7,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0}
+// console.log(Object.entries(obj));
+// // [
+// //     [ '1', 5 ],  [ '2', 7 ],
+// //     [ '3', 0 ],  [ '4', 0 ],
+// //     [ '5', 0 ],  [ '6', 0 ],
+// //     [ '7', 0 ],  [ '8', 0 ],
+// //     [ '9', 0 ],  [ '10', 0 ],
+// //     [ '11', 0 ], [ '12', 0 ]
+// // ]
+
+
+// // 5. remove duplicate values from an array
+// let arr = [1,2,2,3,3,4]
+// let result = new Set(arr)
+// console.log([...result]) // [ 1, 2, 3, 4 ]
+
+
+// // 6. remove duplicate objects from an array
+// const arr = [
+//     {label: 'All', value: 'All'},
+//     {label: 'All', value: 'All'},
+//     {label: 'Alex', value: 'Ninja'},
+//     {label: 'Bill', value: 'Op'},
+//     {label: 'Cill', value: 'iopop'}
+// ]
+
+// var result = arr.reduce((unique, o) => {
+//     if(!unique.some(obj => obj.label === o.label && obj.value === o.value)) {
+//       unique.push(o);
+//     }
+//     return unique;
+// },[]);
+// console.log(result);
+// // [
+// //     { label: 'All', value: 'All' },
+// //     { label: 'Alex', value: 'Ninja' },
+// //     { label: 'Bill', value: 'Op' },
+// //     { label: 'Cill', value: 'iopop' }
+// //   ]
+
+// //  7. make an object immutable
+// let obj = {
+//     "aj": 1
+// }
+// Object.freeze(obj)
+// obj.aj = 5
+// console.log(obj) // { aj: 1 }
+// delete obj.aj //will not delete
+// obj.op = 2 // will not add new property
