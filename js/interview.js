@@ -360,7 +360,7 @@
 // console.log(ad(4)) //6
 
 
-//======================================Promise example===================================
+// //======================================Promise example===================================
 // var promise = new Promise(function(resolve, reject) {
 //     let opt = Math.floor(100000 * Math.random()+900000)
 //     console.log(opt)
@@ -390,6 +390,16 @@
 //       reject("Odd");
 //     }
 //   });
+
+//   async function numb(){
+//     try {
+//         var doc = await promise
+//         console.log(doc)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+// numb()
     
 //   promise.
 //       then(function (msg) {
