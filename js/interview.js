@@ -308,6 +308,58 @@
 //     }
 // }
 // console.log(groupByAge) //{ '20': [ 'Max', 'Jane' ], '21': [ 'Alice' ], '22': [ 'Aghaz' ] }
+//=========================OR============================================
+// let ans = people.reduce((acc,curr) => {
+//     if(acc[curr.age]){
+//         acc[curr.age].push(curr.name)
+//     } else {
+//         acc[curr.age] = [curr.name]
+//     }
+//     return acc
+// },{})
+
+// console.log(ans) //{ '20': [ 'Max', 'Jane' ], '21': [ 'Alice' ], '22': [ 'Aghaz' ] }
+
+
+// function modifyArray(arr, callback) {
+//     // do something to arr here
+//     arr.push(100);
+//     // then execute the callback function that was passed
+//     callback();
+//   }
+  
+//   var arr = [1, 2, 3, 4, 5];
+  
+//   modifyArray(arr, function() {
+//     console.log("array has been modified", arr); //array has been modified [ 1, 2, 3, 4, 5, 100 ]
+// });
+
+
+// function modifyArray(arr, callback) {
+//     // do something to arr here
+//     let sum = arr[0]+arr[1]
+//     // then execute the callback function that was passed
+//     callback(sum);
+//   }
+  
+//   var arr = [1, 2];
+  
+//   modifyArray(arr, function(sum) {
+//     console.log("sum is", sum); // sum is 3
+// });
+
+
+// closure example
+// function createBase(base){
+//     return function addSix(num){
+//         return base + num
+//     }
+// }
+// var ad = createBase(2)
+// console.log(ad(6)) //8
+// console.log(ad(4)) //6
+
+
 
 
 
