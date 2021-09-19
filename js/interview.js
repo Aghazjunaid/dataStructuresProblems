@@ -360,6 +360,47 @@
 // console.log(ad(4)) //6
 
 
+//======================================Promise example===================================
+// var promise = new Promise(function(resolve, reject) {
+//     let opt = Math.floor(100000 * Math.random()+900000)
+//     console.log(opt)
+//     if(opt % 2 == 0) {
+//       resolve();
+//     } else {
+//       reject();
+//     }
+//   });
+    
+//   promise.
+//       then(function () {
+//           console.log('Even number');
+//       }).
+//       catch(function () {
+//           console.log('Odd number');
+//       });
+// // 949588
+// // Even number
+
+// var promise = new Promise(function(resolve, reject) {
+//     let opt = Math.floor(100000 * Math.random()+900000)
+//     console.log(opt)
+//     if(opt % 2 == 0) {
+//       resolve("Even");
+//     } else {
+//       reject("Odd");
+//     }
+//   });
+    
+//   promise.
+//       then(function (msg) {
+//           console.log(msg);
+//       }).
+//       catch(function (err) {
+//           console.log(err);
+//       });
+// // 961509
+// // Odd
+
 
 
 
