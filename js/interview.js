@@ -260,18 +260,57 @@
 // console.log(categoryPosts) //{ frontend: [ 1, 3 ], backend: [ 2 ] }
 
 
+// var wizards = [
+//     {
+//       name: 'Harry Potter',
+//       house: 'Gryfindor'
+//     },
+//     {
+//       name: 'Cedric Diggory',
+//       house: 'Hufflepuff'
+//     },
+//     {
+//       name: 'Tonks',
+//       house: 'Hufflepuff'
+//     },
+//     {
+//       name: 'Ronald Weasley',
+//       house: 'Gryfindor'
+//     },
+//     {
+//       name: 'Hermione Granger',
+//       house: 'Gryfindor'
+//     }
+//   ];
+
+// let ans = wizards.reduce((acc, curr) =>{
+//     if(curr.house == 'Gryfindor'){
+//         acc.push(curr.name)
+//     }
+//     return acc
+// }, [])
+// console.log(ans) //[ 'Harry Potter', 'Ronald Weasley', 'Hermione Granger' ]
+
+
 // let people = [
 //     { name: 'Alice', age: 21 },
 //     { name: 'Max', age: 20 },
-//     { name: 'Jane', age: 20 }
+//     { name: 'Jane', age: 20 },
+//     { name: 'Aghaz', age: 22 }
 // ];
 
-// let ans1 = people.reduce((acc,curr) => {
-//     if( acc[curr]){
-//         acc[curr].push(curr)
+// let groupByAge = {}
+// for(let obj of people){
+//     if(groupByAge[obj.age]){
+//         groupByAge[obj.age].push(obj.name)
 //     } else {
-//         acc[curr] = []
+//         groupByAge[obj.age] = [obj.name]
 //     }
-//     return acc
-// }, {})
-// console.log(ans1)
+// }
+// console.log(groupByAge) //{ '20': [ 'Max', 'Jane' ], '21': [ 'Alice' ], '22': [ 'Aghaz' ] }
+
+
+
+
+
+
