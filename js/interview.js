@@ -162,7 +162,7 @@
 // console.log(newCar) //[ 2, 'cherry condition' ]
 
 
-let arr = [1,10,15,23,12,19]
+// let arr = [1,10,15,23,12,19]
 // console.log   (arr.every(value => value< 30)) //true
 // console.log(arr.filter(value => value> 10)) //[ 15, 23, 12, 19 ]
 // console.log(arr.find(value => value> 10)) //15
@@ -203,3 +203,75 @@ let arr = [1,10,15,23,12,19]
 // // [{key: 1, value: 10},
 // //  {key: 2, value: 20},
 // //  {key: 3, value: 30}]
+
+
+// let arr = [{x: 1}, {x: 2}, {x: 3}]
+// let ans = arr.reduce((prev,curr)=> {
+//     prev = prev + curr.x
+//     return prev
+// },0)
+// console.log(ans) // 6
+
+
+// let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+// let ans = names.reduce((acc,curr) =>{
+//     if(acc[curr]){
+//         acc[curr] += 1
+//     }else{
+//         acc[curr] = 1
+//     }
+//     return acc
+// }, {})
+// console.log(ans) //{ Alice: 2, Bob: 1, Tiff: 1, Bruce: 1 }
+
+
+// const add = {
+//     a: {value:1},
+//     b: {value:2},
+//     c: {value:3}
+//   }
+  
+//   const total = Object.values(add).reduce((t, {value}) => t + value, 0)
+  
+//   console.log(total) // 6
+
+
+// const add = {
+//     a: 1,
+//     b: 2,
+//     c: 3
+//   }
+  
+//   const total = Object.values(add).reduce((t, n) => t + n)
+  
+//   console.log(total) // 6
+
+
+// const posts = [
+//     {id: 1, category: "frontend", title: "All About That Sass"},
+//     {id: 2, category: "backend", title: "Beam me up, Scotty: Apache Beam tips"},
+//     {id: 3, category: "frontend", title: "Sanitizing HTML: Going antibactirial on XSS attacks"}
+// ];
+
+// const categoryPosts = posts.reduce((acc, post) => {
+//     let {id, category} = post;
+//     return {...acc, [category]: [...(acc[category] || []), id]};
+// }, {});
+// console.log(categoryPosts) //{ frontend: [ 1, 3 ], backend: [ 2 ] }
+
+
+// let people = [
+//     { name: 'Alice', age: 21 },
+//     { name: 'Max', age: 20 },
+//     { name: 'Jane', age: 20 }
+// ];
+
+// let ans1 = people.reduce((acc,curr) => {
+//     if( acc[curr]){
+//         acc[curr].push(curr)
+//     } else {
+//         acc[curr] = []
+//     }
+//     return acc
+// }, {})
+// console.log(ans1)
