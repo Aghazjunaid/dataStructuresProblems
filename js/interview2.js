@@ -3,14 +3,16 @@
 
 // //Compare two objects in js
 // const obj1 = {
-//     name: 'Ram',
+//     name: 'Aghaz',
 //     age: 21
 // };
 
 // const obj2 = {
 //     age: 21,
-//     name: 'Ram',
+//     name: 'Aghaz',
 // };
+
+// console.log(JSON.stringify(obj1)===JSON.stringify(obj2)) //false
 
 // console.log(Object.entries(obj1).length)
 // const haveSameData = function (obj1, obj2) {
