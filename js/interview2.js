@@ -27,3 +27,16 @@
 //     return false;
 // }
 // console.log(haveSameData (obj1,obj2)) //true
+
+
+
+// var opt = "efnksfbkjsbfkjs"
+// // var num = 43536536624
+// // console.log(num.length)
+
+// console.log(opt.slice(-4,-1))
+
+
+// var obj = "naz"
+// let res = obj[0].toUpperCase() + obj.slice(1)
+// console.log(res) //Naz
