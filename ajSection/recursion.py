@@ -317,3 +317,13 @@
 #         return bs(arr,tar,mid+1,e)
     
 # print(bs([1,3,5,7,9,11],2,0,len([1,3,5,7,9,11]))) # -1
+
+
+# # n to 1
+# def nto1(n):
+#     if n == 0:
+#         return
+#     print(n)
+#     nto1(n-1)
+
+# nto1(5)
