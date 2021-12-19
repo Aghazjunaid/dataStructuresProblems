@@ -327,3 +327,13 @@
 #     nto1(n-1)
 
 # nto1(5)
+
+# # sum of digits
+# def sod(n):
+#     if n < 9:
+#         return n
+#     rem = n % 10
+#     n = n // 10
+#     return rem + sod(n) 
+
+# print(sod(12345))
