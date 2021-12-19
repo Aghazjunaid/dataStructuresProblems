@@ -304,4 +304,16 @@
 # # 10
 
 
+# # Binary Search
+# def bs(arr,tar,s,e):
+#     if s>e:
+#         return -1
+#     mid = (s+e)//2
+#     if(arr[mid]==tar):
+#         return mid
+#     if arr[mid] > tar:
+#         return bs(arr,tar,s,mid-1)
+#     else:
+#         return bs(arr,tar,mid+1,e)
     
+# print(bs([1,3,5,7,9,11],2,0,len([1,3,5,7,9,11]))) # -1
