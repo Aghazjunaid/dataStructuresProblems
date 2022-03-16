@@ -47,7 +47,7 @@
 #         return False
 #     return isSorted(a, i+1)
 
-# print(isSorted([1,21,3,4,5],0))s
+# print(isSorted([1,21,3,4,5],0))
 # # False
 
 # # First Index Of a Number
@@ -76,18 +76,18 @@
 # # 0
 
 
-# # Replace String
-# def replaceChar(s,a,b):
-#     if len(s) == 0:
-#         return s
-#     out = replaceChar(s[1:], a, b)
-#     print((out))
-#     if s[0]==a:
-#         return b+out
-#     else: 
-#         return s[0]+out
+# Replace String
+def replaceChar(s,a,b):
+    if len(s) == 0:
+        return s
+    out = replaceChar(s[1:], a, b)
+    print((out))
+    if s[0]==a:
+        return b+out
+    else: 
+        return s[0]+out
  
-# print(replaceChar('cdfd', 'd', 'x')) 
+print(replaceChar('cdfd', 'd', 'x')) 
 # cxfx
 
 # # Sum of digits
@@ -304,36 +304,3 @@
 # # 10
 
 
-# # Binary Search
-# def bs(arr,tar,s,e):
-#     if s>e:
-#         return -1
-#     mid = (s+e)//2
-#     if(arr[mid]==tar):
-#         return mid
-#     if arr[mid] > tar:
-#         return bs(arr,tar,s,mid-1)
-#     else:
-#         return bs(arr,tar,mid+1,e)
-    
-# print(bs([1,3,5,7,9,11],2,0,len([1,3,5,7,9,11]))) # -1
-
-
-# # n to 1
-# def nto1(n):
-#     if n == 0:
-#         return
-#     print(n)
-#     nto1(n-1)
-
-# nto1(5)
-
-# # sum of digits
-# def sod(n):
-#     if n < 9:
-#         return n
-#     rem = n % 10
-#     n = n // 10
-#     return rem + sod(n) 
-
-# print(sod(12345))
