@@ -22,6 +22,9 @@ function checkParanthesis(str){
         if(arr1.includes(arr[i])){
             stackArray.push(arr[i])
         }
+
+        if(stackArray.length == 0) return false
+
         if(arr[i] === ']'){
             let removeElement = stackArray.pop()
             if(removeElement == '(' || removeElement == '{') return false
@@ -33,13 +36,16 @@ function checkParanthesis(str){
             if(removeElement == '{' || removeElement == '[') return false
         }
     }
-    console.log(stackArray)
+
+    if(stackArray.length !== 0) return false
+
     return true
 }
 
 
-console.log(checkParanthesis('{{}}')) //true
+console.log(checkParanthesis('{{([}}')) //false
 console.log(checkParanthesis('{([])}')) //true
 console.log(checkParanthesis('{{}[]}')) //true
 console.log(checkParanthesis('{({}}')) //false
 console.log(checkParanthesis('{{}]}]')) //false
+console.log(checkParanthesis('}{}]}]')) //false
