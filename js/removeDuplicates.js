@@ -25,8 +25,9 @@ console.log(findDuplicates(input1));
 
 
 // 2
-a = [1, 2, 4, 5, 6, 1, 3, 7, 9, 10, 2, 5]
+a = [1, 2, 1,2,3]
 uniqueArray = a.filter(function(item, pos) {
+    console.log(a.indexOf(item),pos)
     return a.indexOf(item) == pos;
 })
 console.log(uniqueArray)
