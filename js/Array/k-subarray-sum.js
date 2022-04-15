@@ -1,3 +1,21 @@
+// let arr = [9, 4, 20, 3, 10, 5]
+// let k = 33;
+
+// let count = 0;
+// for(let i =0;i<arr.length;i++){
+//     let sum = arr[i]
+//     for(let j=i+1;j<arr.length;j++){
+//         sum += arr[j]
+//         if(sum == k){
+//             count++
+//         }
+//     }
+// }
+
+// console.log(count) //2
+
+
+// 2(Best Approach)
 let arr = [10, 2, -2, -20, 10]
 let sum = -10;
 
