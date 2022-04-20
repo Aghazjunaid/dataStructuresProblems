@@ -21,3 +21,20 @@ function serachRange(arr,k){
 console.log(serachRange(arr,k)) //[2,4]
 console.log(serachRange([1, 2, 3, 3, 3, 4, 4, 5],5)) //[7,7]
 console.log(serachRange([1, 2, 3, 3, 3, 4, 4, 5],6)) //[-1,-1]
+
+
+// 2
+function serachRange2(arr,k){
+    let j = -1
+    let count = -1
+    for(let i = 0;i<arr.length;i++){
+        if(arr[i] == k){
+            if(j==-1) j=i
+            count = i
+        }
+    }
+    return [j,count]
+}
+
+
+//
