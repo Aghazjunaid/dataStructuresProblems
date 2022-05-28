@@ -16,6 +16,7 @@ let k =3;
 // }
 // console.log(count) // 21
 
+
 // Sliding window technique
 let firstSum = 0;
 for(let i=0;i<k;i++){
