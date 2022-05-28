@@ -1,14 +1,13 @@
-let arr = [9, 4, 20, 3, 10, 5]
-let k = 33;
-let count = 0;
+function checkParanthesis(str){
+    
 
-for(let i=0;i<arr.length;i++){
-    let sum = 0
-    for(let j=i;j<arr.length;j++){
-        sum += arr[j]
-        if(sum == k) count++        
-
-    }
+    return true
 }
 
-console.log(count)
+
+console.log(checkParanthesis('{{([}}')) //false
+console.log(checkParanthesis('{([])}')) //true
+console.log(checkParanthesis('{{}[]}')) //true
+console.log(checkParanthesis('{({}}')) //false
+console.log(checkParanthesis('{{}]}]')) //false
+console.log(checkParanthesis('}{}]}]')) //false
