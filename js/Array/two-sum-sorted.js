@@ -49,3 +49,21 @@ for(let i=0;i<arr.length;i++){
     }
     obj[arr[i]] = i
 }
+////////
+let arr = [1,5,7,-1,5];
+let num = 6
+
+let obj ={}
+for(let i =0;i<arr.length;i++){
+    let diff = num -arr[i]
+    if(diff in obj && obj[diff] > 0){
+        console.log(arr[i],diff)
+        obj[diff] -= 1
+    }
+    console.log(obj)
+    if(arr[i] in obj){
+        obj[arr[i]] += 1
+    }else {
+        obj[arr[i]] = 1
+    }
+}
