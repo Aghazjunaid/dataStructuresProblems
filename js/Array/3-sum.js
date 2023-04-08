@@ -36,3 +36,51 @@ for(let i=0;i<arr.length;i++){
 }
 console.log(newArr) //[ [ -2, 1, 1 ], [ -1, 0, 1 ] ]
 
+
+function find3Numbers(A,arr_size,sum)
+{
+    // Fix the first element as A[i]
+    for (let i = 0; i < arr_size - 2; i++) {
+
+        // Find pair in subarray A[i+1..n-1]
+        // with sum equal to sum - A[i]
+        let s = new Set(); //21
+        let curr_sum = sum - A[i];
+        for (let j = i + 1; j < arr_size; j++)
+        {
+            if (s.has(curr_sum - A[j]))
+            {
+                console.log(A[i],A[j],(curr_sum-A[j]))
+                return true;
+            }
+            s.add(A[j]);
+        }
+    }
+
+    // If we reach here, then no triplet was found
+    return false;
+}
+
+let A=[1, 4, 45, 6, 10, 8];
+     
+    let sum = 22;
+    let arr_size = A.length;
+    find3Numbers(A, arr_size, sum);
+
+
+
+
+    let arr = [-2,-1,0,1,1]
+
+let obj = {}
+for(let i = 0; i<arr.length;i++){
+    for(let j=i+1; j<arr.length;j++){
+        let num = 0 - (arr[i] + arr[j])
+        if(num in obj){
+            console.log(arr[i],arr[j],num)
+        }
+        obj[num] = 1
+    }
+}
+
+console.log(arr)

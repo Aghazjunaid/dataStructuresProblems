@@ -31,4 +31,4 @@ while(right <arr.length){
         left++
     }
 }
-console.log(count)
+console.log(count) //3
