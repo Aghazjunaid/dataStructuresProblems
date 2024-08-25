@@ -49,3 +49,29 @@ console.log(checkParanthesis('{{}[]}')) //true
 console.log(checkParanthesis('{({}}')) //false
 console.log(checkParanthesis('{{}]}]')) //false
 console.log(checkParanthesis('}{}]}]')) //false
+
+
+//2
+function aj(str){
+  let arr = [];
+  
+  for(let i=0;i<str.length;i++){
+    if(['(','{','['].includes(str[i])) arr.push(str[i]);
+    else if(str[i] == ')'){
+      let value = arr.pop();
+      if(value != '(') return false;
+    }else if(str[i] == '}'){
+      let value = arr.pop();
+      if(value != '{') return false;
+    }else if(str[i] == ']'){
+      let value = arr.pop();
+      if(value != '[') return false;
+    }
+  }
+  
+  if(str.length != 0 ) return false
+  
+  return true
+  
+  
+}
