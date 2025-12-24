@@ -164,3 +164,34 @@ for(let i=0;i<n;i++){
 }
 
 console.log(ans)
+
+9.
+//     * 
+//    * * 
+//   * * * 
+//  * * * * 
+// * * * * * 
+//* * * * * *
+
+let n = 6;
+let ans = '';
+
+for (let i = 1; i <= n; i++) {
+
+  // leading spaces
+  for (let s = 1; s <= n - i; s++) {
+    ans += ' ';
+  }
+
+  // stars with space after each star
+  for (let j = 1; j <= i; j++) {
+    ans += '* ';
+  }
+
+  ans += '\n';
+}
+
+console.log(ans);
+
+10.
+
