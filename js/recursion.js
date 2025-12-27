@@ -230,3 +230,116 @@ ans + arr[i]
 ✅ Always do:
 [...ans, arr[i]]
 
+13. subset2
+let result = []
+function rec(arr,i,ans,flag){
+  if(arr.length == i){
+    result.push([...ans]);
+    return
+  }
+  
+  if(!flag && arr[i] == arr[i-1]){
+      rec(arr,i+1,ans,false)
+  } else {
+    ans.push(arr[i])       //this will also work
+    rec(arr,i+1,ans, true) //rec(arr,i+1,[...ans,arr[i]], true)
+    ans.pop()              // for these 3 lines
+    rec(arr,i+1,ans,false)
+  }
+ 
+}
+
+console.log(rec([1, 2, 2],0,[],true))
+console.log(result) //[ [ 1, 2, 2 ], [ 1, 2 ], [ 1 ], [ 2, 2 ], [ 2 ], [] ]
+
+14. 
+let result = [];
+
+  function rec(chars, path) {
+    if (chars.length === 0) {
+      result.push(path);
+      return;
+    }
+
+    for (let i = 0; i < chars.length; i++) {
+      let ch = chars[i];
+      let remaining = chars.slice(0, i) + chars.slice(i + 1);
+
+      rec(remaining, path + ch);
+    }
+  }
+
+  rec(str, "");
+  return result; // [ 'abc', 'acb', 'bca', 'bac', 'cab', 'cba' ]
+
+Har position ke liye:
+Baaki characters me se ek choose karo
+Use current position par rakho
+Baaki ke liye recursion chalao
+Kaam ho jaaye to backtrack karo
+                         ""
+          ┌──────────────┼──────────────┐
+          a              b              c
+       ┌──┴──┐         ┌──┴──┐         ┌──┴──┐
+      ab    ac        ba    bc        ca    cb
+      |      |        |      |        |      |
+     abc    acb      bac    bca      cab    cba
+
+15. 
+var permute = function(nums) {
+    let result = [];
+
+    function rec(arr, ans) {
+        if (arr.length === 0) {
+            result.push([...ans]);
+            return;
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            rec(
+              [...arr.slice(0, i), ...arr.slice(i + 1)],
+              [...ans, arr[i]]
+            );
+        }
+    }
+
+    rec(nums, []);
+    return result;  //[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+};
+
+nums = [1,2,3]
+
+16. Permutations 2
+var permuteUnique = function(nums) {
+    nums.sort((a,b) => a-b);  
+    let result = [];
+    let visited = Array(nums.length).fill(false);
+
+    function backtrack(path) {
+        if (path.length === nums.length) {
+            result.push([...path]);
+            return;
+        }
+
+        for (let i = 0; i < nums.length; i++) {
+            if (visited[i]) continue;
+
+            if (i > 0 && nums[i] === nums[i-1] && !visited[i-1]) continue;
+
+            visited[i] = true;
+            path.push(nums[i]);
+            backtrack(path);
+            path.pop();
+            visited[i] = false;
+        }
+    }
+
+    backtrack([]);
+    return result;
+};
+console.log(permuteUnique([1,1,2])); //[
+//  [1,1,2],
+//  [1,2,1],
+//  [2,1,1]
+// ]
+
