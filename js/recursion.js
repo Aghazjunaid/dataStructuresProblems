@@ -172,4 +172,61 @@ rec(arr, 6, max=1, min=1)
                           └─ rec(arr,0,max=8,min=-5)
                                └─ base case → return {min: -5, max: 8}
 
+11.
+function isPalindrome(str, s, e) {
+  // base case: crossed the middle
+  if (s >= e) return true;
+
+  // mismatch found
+  if (str[s] !== str[e]) return false;
+
+  // recursive check for inner substring
+  return isPalindrome(str, s + 1, e - 1);
+}
+
+console.log(isPalindrome('abba', 0, 'abba'.length - 1)); // true
+console.log(isPalindrome('abcba', 0, 'abcba'.length - 1)); // true
+console.log(isPalindrome('abcd', 0, 'abcd'.length - 1)); // false
+
+12.All Subsets of a given Array
+let result = [];
+
+function rec(arr, i, ans) {
+  if (i === arr.length) {
+    result.push(ans);
+    // console.log(ans);
+    return;
+  }
+
+  // include
+  rec(arr, i + 1, [...ans, arr[i]]);
+
+  // exclude
+  rec(arr, i + 1, ans);
+}
+
+rec([1, 2, 3], 0, []);
+console.log(result);
+[
+  [ 1, 2, 3 ], [ 1, 2 ],
+  [ 1, 3 ],    [ 1 ],
+  [ 2, 3 ],    [ 2 ],
+  [ 3 ],       []
+]
+
+                        []
+               /----------------\
+           exclude 1           include 1
+              []                  [1]
+         /-----------\        /-----------\
+     excl 2        incl 2  excl 2        incl 2
+       []            [2]      [1]          [1,2]
+     /----\        /----\    /----\        /----\
+   []    [3]     [2]   [2,3] [1]  [1,3]  [1,2] [1,2,3]
+
+❌ Never do:
+ans + arr[i]
+
+✅ Always do:
+[...ans, arr[i]]
 
