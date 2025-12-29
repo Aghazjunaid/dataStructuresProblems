@@ -343,3 +343,99 @@ console.log(permuteUnique([1,1,2])); //[
 //  [2,1,1]
 // ]
 
+17. Coin Toss
+function rec(n,ans){
+  if(n == 0){
+    console.log(ans)
+    return
+  }
+  
+  rec(n-1, ans+'H')
+  rec(n-1, ans+'T')
+
+}
+
+console.log(rec(2,'')) // HH, TT,HT,TH
+
+18. climbing stairs
+function rec(n){
+  if (n === 0 || n === 1) return 1;
+  
+  return rec(n-1) + rec(n-2)
+}
+
+console.log(rec(2)) //2
+
+
+function rec(n,ans){
+  if (n === 0) {
+    console.log(ans)
+    return
+  }
+  
+  if(n < 0) return
+  
+  rec(n-1,ans+1)
+  rec(n-2,ans+2)
+}
+
+console.log(rec(3,'')) // 111, 12, 21
+
+19. Print all combinations of balanced parentheses
+function generateParentheses(n) {
+  let result = [];
+
+  function rec(open, close, ans) {
+    // base case
+    if (open === n && close === n) {
+      result.push(ans);
+      return;
+    }
+
+    // add '('
+    if (open < n) {
+      rec(open + 1, close, ans + "(");
+    }
+
+    // add ')'
+    if (close < open) {
+      rec(open, close + 1, ans + ")");
+    }
+  }
+
+  rec(0, 0, "");
+  return result;
+}
+
+console.log(generateParentheses(2)); //[ "( ( ) )", "( )( )" ]
+
+
+rec(0,0,"")
+│
+├─ "(" → rec(1,0,"(")
+│   ├─ "(" → rec(2,0,"((")
+│   │   └─ ")" → rec(2,1,"(()")
+│   │       └─ ")" → rec(2,2,"(())") ✅
+│   │
+│   └─ ")" → rec(1,1,"()")
+│       └─ "(" → rec(2,1,"()(")
+│           └─ ")" → rec(2,2,"()()") ✅
+
+20. check balanced parentheses
+function rec(str,i,o,c){
+  if (i === str.length) {
+    return o == c
+  }
+  
+  if(c>o) return false;
+  if(str[i] == '('){
+    return rec(str,i+1,o+1,c)
+  } else {
+    return rec(str,i+1,o,c+1)
+  }
+}
+
+console.log(rec('(())()',0,0,0)) //true
+
+21. 
+
