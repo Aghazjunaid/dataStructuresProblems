@@ -75,6 +75,30 @@ BFS ka Idea (Simple Soch)
     Uske right child ko queue me daalo (agar exist karta ho)
 
 Q1. Maximum Depth or Height of a Binary Tree
+function height(root) {
+  if(!root) return 0;
+  
+  return 1 + Math.max(height(root.left), height(root.right))
+}
+
+console.log(height(root)) //3
+Left subtree ki height nikaalo
+Right subtree ki height nikaalo
+Dono me se jo bada ho, use lo
+Current node ke liye +1
+
+Q2. Search in a tree
+function search(root,k) {
+  if(!root) return false;
+  
+  if(root.val == k) return true;
+  
+  return search(root.left,k) || search(root.right,k)
+}
+
+console.log(search(root,2)) //true
+
+Q3. 
 
 
 
