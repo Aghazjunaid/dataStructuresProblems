@@ -98,7 +98,88 @@ function search(root,k) {
 
 console.log(search(root,2)) //true
 
-Q3. 
+Q3. Level of a Node in Binary Tree
+function findLevel(root, target, level = 1) { //DFS solution
+  if (root === null) return -1;
+
+  if (root.val === target) return level;
+
+  let left = findLevel(root.left, target, level + 1);
+  if (left !== -1) return left;
+
+  return findLevel(root.right, target, level + 1);
+}
+
+console.log(findLevel(root,4,1)) // 3
+
+
+function findLevel(root,key) { //BFS
+  
+  let result = 1;
+  let queue = [root];
+  
+  while(queue.length > 0){
+    let size = queue.length
+    for(let i=0;i<size;i++){
+      let node = queue.shift();
+      
+      if(node.val === key) return result;
+      
+      if(node.left) queue.push(node.left)
+      if(node.right) queue.push(node.right)
+    }
+    result++
+  }
+
+  return -1;
+}
+
+console.log(findLevel(root,4)) //3
+
+Q4. Find the parent of a node in the given binary tree
+function findParentBFS(root, target) {
+  if (root === null || root.val === target) return null;
+
+  let queue = [root];
+
+  while (queue.length > 0) {
+    let node = queue.shift();
+
+    if (
+      (node.left && node.left.val === target) ||
+      (node.right && node.right.val === target)
+    ) {
+      return node;
+    }
+
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+
+  return null;
+}
+
+
+console.log(findParentBFS(root,4)) //2
+I traverse the tree and check if the current node’s left or right child matches the target.
+If yes, the current node is the parent.
+
+function findParentDFS(root, target) {
+  if (root === null || root.val === target) return -1;
+
+  if (
+    (root.left && root.left.val === target) ||
+    (root.right && root.right.val === target)
+  ) {
+    return root;
+  }
+
+  return findParentDFS(root.left, target)
+  return findParentDFS(root.right, target)
+}
+
+
+console.log(findParentDFS(root,4)) // 2
 
 
 
