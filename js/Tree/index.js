@@ -159,7 +159,6 @@ function findParentBFS(root, target) {
   return null;
 }
 
-
 console.log(findParentBFS(root,4)) //2
 I traverse the tree and check if the current node’s left or right child matches the target.
 If yes, the current node is the parent.
@@ -178,8 +177,87 @@ function findParentDFS(root, target) {
   return findParentDFS(root.right, target)
 }
 
-
 console.log(findParentDFS(root,4)) // 2
 
+Q6. Insertion in a Binary Tree in level order
+function insert(root, target) {
+  if (root === null ) return;
+  
+  let queue = [root]
+  
+  while(queue.length > 0){
+    let size = queue.length;
+    
+    for(let i=0;i<size;i++){
+      let node = queue.shift();
+      
+      if(!node.left){
+        node.left = new BinaryTree(target)
+        return
+      } 
+      if(node.left) {
+        queue.push(node.left)
+      }
+      
+      if(!node.right){
+        node.right = new BinaryTree(target)
+        return
+      } 
+      if(node.right) {
+        queue.push(node.right)
+      }
+    }
+  }
+}
+
+console.log(insert(root,7))
+- Agar root null hai → new node root bana do
+- Queue me root daalo
+  Jab tak queue empty na ho:
+  Node nikalo
+  Agar left null → insert & break
+  Agar right null → insert & break
+  Nahi to left & right ko queue me daalo
+
+Q7. All Leaves of a Binary Tree - Print in Order
+function printLeaf(root, res = []) {
+  if (root === null) return res;
+
+  if (!root.left && !root.right) {
+    res.push(root.val);
+  }
+
+  printLeaf(root.left, res);
+  printLeaf(root.right, res);
+
+  return res;
+}
+
+console.log(printLeaf(root)); // [4,5,6]
+
+function printLeafBFS(root) {
+  if (root === null ) return;
+  
+  let queue = [root]
+  let result = []
+  
+  while(queue.length > 0){
+    let size = queue.length;
+    
+    for(let i=0;i<size;i++){
+      let node = queue.shift();
+      
+      if(!node.left && !node.right) result.push(node.val)
+      
+      if(node.left) queue.push(node.left)
+      if(node.right) queue.push(node.right)
+    }
+  }
+  
+  return result
+}
+
+console.log(printLeafBFS(root)); // [4,5,6]
 
 
+Q8. 
