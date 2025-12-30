@@ -260,4 +260,18 @@ function printLeafBFS(root) {
 console.log(printLeafBFS(root)); // [4,5,6]
 
 
-Q8. 
+Q8. Check if Two Trees are Identical
+function isIdentical(root1, root2) {
+  // dono null → identical
+  if (root1 === null && root2 === null) return true;
+
+  // ek null, ek non-null → not identical
+  if (root1 === null || root2 === null) return false;
+
+  // value same + left identical + right identical
+  return (
+    root1.val === root2.val &&
+    isIdentical(root1.left, root2.left) &&
+    isIdentical(root1.right, root2.right)
+  );
+}
