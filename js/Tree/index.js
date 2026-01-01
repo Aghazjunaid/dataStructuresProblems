@@ -275,3 +275,20 @@ function isIdentical(root1, root2) {
     isIdentical(root1.right, root2.right)
   );
 }
+
+Q9. Invert Binary Tree - Change to Mirror Tree
+function invertTree(root) {
+  if (root === null) return null;
+
+  // swap
+  let temp = root.left;
+  root.left = root.right;
+  root.right = temp;
+
+  // invert subtrees
+  invertTree(root.left);
+  invertTree(root.right);
+
+  return root;
+}
+
