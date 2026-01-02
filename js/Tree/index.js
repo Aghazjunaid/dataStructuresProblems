@@ -362,4 +362,23 @@ function isSymmetricBFS(root) {
   return true;
 }
 
+Q11. Balanced Binary Tree or Not
+function balancedTree(root){
+  if (!root) return true;
+  
+  let lheight = height(root.left);
+  let rheight = height(root.right);
 
+  if (Math.abs(lheight - rheight) > 1) return false;
+
+  return balancedTree(root.left) && balancedTree(root.right);
+}
+
+console.log(balancedTree(root)); // true
+
+Balanced tree hone ke liye:
+    Left subtree balanced ho AND
+    Right subtree balanced ho
+
+
+Q12. 
