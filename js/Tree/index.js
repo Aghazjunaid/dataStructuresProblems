@@ -381,4 +381,42 @@ Balanced tree hone ke liye:
     Right subtree balanced ho
 
 
-Q12. 
+Q12. Check for Children Sum Property in a Binary Tree
+function rec(root) {
+  if (root === null) return true;
+
+  // leaf node
+  if (!root.left && !root.right) return true;
+
+  let leftVal = root.left ? root.left.val : 0;
+  let rightVal = root.right ? root.right.val : 0;
+
+  if (root.val !== leftVal + rightVal) return false;
+
+  return rec(root.left) && rec(root.right);
+}
+
+function recBFS(root){
+  if (!root) return true;
+  
+  let queue = [root];
+  
+  while (queue.length > 0) {
+    let node = queue.shift();
+    
+    // leaf node → skip check
+    if (!node.left && !node.right) continue;  //imp step need to remember
+    
+    let leftVal = node.left ? node.left.val : 0;
+    let rightVal = node.right ? node.right.val : 0;
+    
+    if (leftVal + rightVal !== node.val) return false;
+    
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+  
+  return true;
+}
+
+Q13. 
