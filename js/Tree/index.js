@@ -292,3 +292,28 @@ function invertTree(root) {
   return root;
 }
 
+🧠 Soch:
+1. Root pe left-right swap
+2. Left subtree invert
+3. Right subtree invert
+
+function invertTreeBFS(root) {
+  if (!root) return null;
+
+  let queue = [root];
+
+  while (queue.length > 0) {
+    let node = queue.shift();
+
+    // swap
+    [node.left, node.right] = [node.right, node.left];
+
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+
+  return root;
+}
+
+Q10. 
+
