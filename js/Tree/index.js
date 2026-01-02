@@ -315,5 +315,51 @@ function invertTreeBFS(root) {
   return root;
 }
 
-Q10. 
+Q10. Symmetric Tree
+🧠 Core Idea
+Left subtree ka:
+    left ↔ Right subtree ka right
+    right ↔ Right subtree ka left
+
+function isSymmetric(root) {
+  if (!root) return true;
+
+  return isMirror(root.left, root.right);
+}
+
+function isMirror(left, right) {
+  // dono null → mirror
+  if (left === null && right === null) return true;
+
+  // ek null, ek non-null → not mirror
+  if (left === null || right === null) return false;
+
+  // value same + mirror children
+  return (
+    left.val === right.val &&
+    isMirror(left.left, right.right) &&
+    isMirror(left.right, right.left)
+  );
+}
+
+
+function isSymmetricBFS(root) {
+  if (!root) return true;
+
+  let queue = [[root.left, root.right]];
+
+  while (queue.length > 0) {
+    let [left, right] = queue.shift();
+
+    if (!left && !right) continue;
+    if (!left || !right) return false;
+    if (left.val !== right.val) return false;
+
+    queue.push([left.left, right.right]);
+    queue.push([left.right, right.left]);
+  }
+
+  return true;
+}
+
 
