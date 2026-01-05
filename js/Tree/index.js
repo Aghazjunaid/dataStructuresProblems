@@ -420,4 +420,66 @@ function recBFS(root){
 }
 
 Q13. Print all nodes at distance k from a given node
+function buildParentMap(root) {
+  let parentMap = new Map();
+  let queue = [root];
+
+  parentMap.set(root, null);
+
+  while (queue.length > 0) {
+    let node = queue.shift();
+
+    if (node.left) {
+      parentMap.set(node.left, node);
+      queue.push(node.left);
+    }
+
+    if (node.right) {
+      parentMap.set(node.right, node);
+      queue.push(node.right);
+    }
+  }
+
+  return parentMap;
+}
+
+function nodesAtDistanceK(root, target, k) {
+  let parentMap = buildParentMap(root);
+
+  let queue = [target];
+  let visited = new Set();
+  visited.add(target);
+
+  let distance = 0;
+
+  while (queue.length > 0) {
+    let size = queue.length;
+
+    // jab distance == k → answer
+    if (distance === k) {
+      return queue.map(node => node.val);
+    }
+
+    for (let i = 0; i < size; i++) {
+      let node = queue.shift();
+
+      let neighbors = [
+        node.left,
+        node.right,
+        parentMap.get(node)
+      ];
+
+      for (let next of neighbors) {
+        if (next && !visited.has(next)) {
+          visited.add(next);
+          queue.push(next);
+        }
+      }
+    }
+
+    distance++;
+  }
+
+  return [];
+}
 
