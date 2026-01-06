@@ -483,3 +483,32 @@ function nodesAtDistanceK(root, target, k) {
   return [];
 }
 
+Q14 Diameter of a Binary Tree
+🧠 Top-Down Recursion ka Idea
+  -Har node ko root maan ke:
+  -Left subtree ki height nikalo
+  -Right subtree ki height nikalo
+  -[Diameter through that node = leftHeight + rightHeight
+  -Global max update karo
+  -Recursively left & right pe repeat
+
+function diameterOfBinaryTree(root) {
+  let diameter = 0;
+
+  function dfs(node) {
+    if (!node) return;
+
+    let leftHeight = height(node.left);
+    let rightHeight = height(node.right);
+
+    // diameter through current node
+    diameter = Math.max(diameter, leftHeight + rightHeight);
+
+    dfs(node.left);
+    dfs(node.right);
+  }
+
+  dfs(root);
+  return diameter;
+}
+
