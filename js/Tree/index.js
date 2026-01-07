@@ -512,3 +512,32 @@ function diameterOfBinaryTree(root) {
   return diameter;
 }
 
+🧠 Bottom-Up Approach ka Core Idea
+Height calculate karte time hi diameter update kar do
+👉 Har node se upar jaate hue:
+  -Left height mil jaati hai
+  -Right height mil jaati hai
+  -Diameter through node = leftHeight + rightHeight
+  -Global max update
+
+function diameterOfBinaryTree(root) {
+  let diameter = 0;
+
+  function height(node) {
+    if (!node) return 0;
+
+    let leftHeight = height(node.left);
+    let rightHeight = height(node.right);
+
+    // update diameter
+    diameter = Math.max(diameter, leftHeight + rightHeight);
+
+    // return height
+    return 1 + Math.max(leftHeight, rightHeight);
+  }
+
+  height(root);
+  return diameter;
+}
+
+
