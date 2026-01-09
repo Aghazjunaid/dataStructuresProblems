@@ -1,3 +1,32 @@
+## Binary Tree Creation & Example Structure
+
+```js
+class BinaryTree {
+  constructor(value) {
+    this.val = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+const root = new BinaryTree(1);
+root.left = new BinaryTree(2);
+root.right = new BinaryTree(3);
+root.left.left = new BinaryTree(4);
+root.left.right = new BinaryTree(5);
+root.right.right = new BinaryTree(6);
+````
+
+### Tree Representation
+
+```
+    1
+   / \
+  2   3
+ / \   \
+4   5   6
+```
+
 # 🌳 Binary Tree – Interview Questions (Short Approach + Solution)
 
 > JavaScript based solutions with **short, interview-friendly approaches**.
