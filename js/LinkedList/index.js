@@ -131,6 +131,43 @@ class LinkedList{
      current = current.next
    } 
   }
+
+  // =========================
+  // SEARCH
+  // =========================
+  search(value){
+    if(this.head.data == value){
+      return true
+    }
+    
+    let current = this.head;
+    while(current != null){
+      if(current.data == value){
+        return true
+      }
+      current = current.next
+    }
+    
+    return false;
+  }
+
+// =========================
+  // LENGTH
+  // =========================
+  size(){
+    if(this.head == null){
+      return 0
+    }
+    
+    let current = this.head;
+    let count = 0;
+    while(current != null){
+      count++
+      current = current.next
+    }
+    
+    return count;
+  }
   
   print(){
     let current = this.head;
@@ -155,3 +192,5 @@ list.print()
 list.deleteLast();
 list.deleteByValue(30)
 list.print()
+console.log(list.search(20)) //true
+console.log(list.size()) //5
