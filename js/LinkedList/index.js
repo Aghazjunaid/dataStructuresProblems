@@ -1,6 +1,19 @@
 //Note:-
 // 1. while(current !== null) - jab tak current node exist karta hai
+// Use - When:
+// processing current node
+// checking current.data
+// printing current node
+// searching current node
+
 // 2. while(current.next !== null) - jab tak next node exist karta hai
+// Use - When:
+// you need access to next node
+// deleting next node
+// stopping before last node
+// inserting before end
+
+//3. “Jab bhi current.next access karoge, pehle ensure karo ki current.next null na ho.”
 
 class Node{
   constructor(data){
@@ -73,9 +86,53 @@ class LinkedList{
     prev.next = node;
     node.next = current
   }
+
+  // =========================
+  // DELETE FIRST NODE
+  // =========================
+  deleteFirst(){
+    let current = this.head;
+    let next = current.next;
+    this.head = next;
+  }
+
+  // =========================
+  // DELETE LAST NODE
+  // =========================
+  deleteLast(){
+    let current = this.head;
+    let prev = null
+    while(current.next != null){
+      prev = current;
+      current = current.next
+    }
+    
+    prev.next = null
+  }
+
+  // =========================
+  // DELETE BY VALUE
+  // =========================
+  deleteByValue(value){
+   if(this.head.data == value){
+     this.head = this.head.next;
+     return
+   } 
+   
+   let current = this.head;
+   let prev = null;
+   
+   while(current.next != null){
+     prev = current
+     if(current.next.data == value){
+       prev.next = current.next.next
+       return
+     }
+     current = current.next
+   } 
+  }
   
   print(){
-    
     let current = this.head;
     while(current != null){
       console.log(current.data)
@@ -92,4 +149,9 @@ list.append(20);
 list.append(30);
 list.prepend(1)
 list.insertAt(25,3)
+list.print()
+list.deleteFirst()
+list.print()
+list.deleteLast();
+list.deleteByValue(30)
 list.print()
