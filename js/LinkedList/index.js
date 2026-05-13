@@ -169,11 +169,13 @@ class LinkedList{
     return count;
   }
 
-  // =========================
+  // ========================= 
   // FIND MIDDLE NODE
   // =========================
+  // Slow & Fast Pointer Logic
+  //   fast end tak pahuchta hai
+  //   tab tak slow middle pe hota hai
   findMiddle(){
-    
     let slow = this.head;
     let fast = this.head;
     
@@ -183,6 +185,26 @@ class LinkedList{
     }
     
     return slow.data
+  }
+
+  // =========================
+  // HAS CYCLE
+  // =========================
+  // Solution → Floyd Cycle Detection Algorithm OR Tortoise and Hare Algorithm
+  //   Fast pointer 2 step aur slow pointer 1 step move karta hai, aur agar cycle hoga toh dono pointers eventually mil jayenge
+  hasCycle(){
+    let slow = this.head;
+    let fast = this.head;
+    while(fast != null && fast.next != null){
+      slow = slow.next;
+      fast = fast.next.next;
+      
+      if(slow == fast){
+        return true
+      }
+    }
+    
+    return false
   }
   
   print(){
