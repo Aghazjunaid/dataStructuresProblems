@@ -232,3 +232,5 @@ list.deleteByValue(30)
 list.print()
 console.log(list.search(20)) //true
 console.log(list.size()) //5
+console.log(list.findMiddle())
+console.log(list.hasCycle())
